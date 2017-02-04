@@ -1,3 +1,4 @@
 class Place < ApplicationRecord
-  has_and_belongs_to_many :flats
+  has_many :flats_places
+  has_many :flats, though: :flats_places
 end

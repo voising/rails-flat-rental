@@ -1,4 +1,6 @@
 class Room < ApplicationRecord
   belongs_to :flat
-  has_and_belongs_to_many :rooms
+
+  has_many :beds_room
+  has_many :beds, though: :beds_room
 end

@@ -1,3 +1,4 @@
 class Service < ApplicationRecord
-  has_and_belongs_to_many :flats
+  has_many :flats_service
+  has_many :flats, through: :flats_service
 end

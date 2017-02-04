@@ -2,8 +2,12 @@ class Flat < ApplicationRecord
   belongs_to :user
   # belongs_to :manager
   has_many :rooms
-  has_and_belongs_to_many :services
-  has_and_belongs_to_many :places
+
+  has_many :flats_services
+  has_many :services, through: :flats_service
+
+  has_many :flats_places
+  has_many :places, through: :flats_places
 
   enum kind: %i(shared private)
 end
