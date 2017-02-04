@@ -1,0 +1,14 @@
+.registrations-new.h100 layout="colum" layout-align="center center"
+  md-content ng-cloak="true" layout-gt-sm="column" layout-padding="true"
+    h2.md-display-1
+      | Sign up
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {layout:'column', 'layout-align' =>'start start'}) do |f|
+      = f.error_notification
+      md-input-container
+        = f.input :email, required: true, autofocus: true, wrapper: false
+      md-input-container
+        = f.input :password, required: true, wrapper: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+      md-input-container
+        = f.input :password_confirmation, required: true, wrapper: false
+      = f.button :submit, 'Sign up', class: 'md-button md-primary'
+      = render 'devise/shared/links'

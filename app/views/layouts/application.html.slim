@@ -1,0 +1,15 @@
+doctype html
+html.h100 ng-app="bookingApp"
+  head
+    base href="/"
+    title RoomBooking
+    = csrf_meta_tags
+
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"
+    = stylesheet_link_tag 'application', media: 'all'
+  body.h100
+    .app.h100 ng-view="true"
+    = yield
+    = javascript_include_tag 'application'
+
+

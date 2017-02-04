@@ -1,0 +1,13 @@
+<%
+  templates = File.join(Rails.root, %w{app assets javascripts components ** *})
+
+
+  Dir.glob(templates).each do |f|
+    if f =~ /scss$/
+    %>
+      <%= Tilt.new(f).render %>
+    <%
+    end
+  end
+
+%>

@@ -9,5 +9,5 @@ class Flat < ApplicationRecord
   has_many :flats_places
   has_many :places, through: :flats_places
 
-  enum kind: %i(shared private)
+  enum kind: %i(shared independent)
 end

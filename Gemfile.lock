@@ -207,9 +207,14 @@ GEM
       rails-assets-angular (= 1.6.1)
     rails-assets-angular-aria (1.6.1)
       rails-assets-angular (= 1.6.1)
+    rails-assets-angular-cookies (1.6.1)
+      rails-assets-angular (= 1.6.1)
     rails-assets-angular-dragdrop (1.0.13)
       rails-assets-angular
       rails-assets-jquery-ui
+    rails-assets-angular-fontawesome (1.0.0)
+      rails-assets-angular (>= 1.2, < 2)
+      rails-assets-font-awesome (~> 4)
     rails-assets-angular-google-maps (2.1.1)
       rails-assets-angular (>= 1.2.0)
       rails-assets-lodash (~> 2.4.1)
@@ -220,16 +225,22 @@ GEM
       rails-assets-angular-messages (>= 1.4.8, < 2)
     rails-assets-angular-messages (1.6.1)
       rails-assets-angular (= 1.6.1)
+    rails-assets-angular-resource (1.6.1)
+      rails-assets-angular (= 1.6.1)
     rails-assets-angular-route (1.6.1)
       rails-assets-angular (= 1.6.1)
     rails-assets-angular-selectize2 (3.0.1)
       rails-assets-selectize (>= 0.12.1)
     rails-assets-angular-translate (2.5.2)
-    rails-assets-angular-translate-loader-static-files (2.5.2)
-      rails-assets-angular-translate (~> 2.5.2)
+    rails-assets-angular-ui-notification (0.3.5)
+      rails-assets-angular (>= 1.5.0, < 2)
+    rails-assets-components-font-awesome (4.7.0)
+    rails-assets-font-awesome (4.7.0)
     rails-assets-jquery (3.1.1)
     rails-assets-jquery-ui (1.12.1)
       rails-assets-jquery (>= 1.6)
+    rails-assets-lf-ng-md-file-input (1.5.1)
+      rails-assets-angular-material (>= 1.0.9, < 2)
     rails-assets-lodash (2.4.2)
     rails-assets-microplugin (0.0.3)
     rails-assets-moment (2.15.0)
@@ -362,13 +373,19 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-assets-angular!
   rails-assets-angular-animate!
+  rails-assets-angular-aria!
+  rails-assets-angular-cookies!
   rails-assets-angular-dragdrop!
+  rails-assets-angular-fontawesome!
   rails-assets-angular-google-maps!
   rails-assets-angular-material!
+  rails-assets-angular-resource!
   rails-assets-angular-route!
   rails-assets-angular-selectize2!
   rails-assets-angular-translate!
-  rails-assets-angular-translate-loader-static-files!
+  rails-assets-angular-ui-notification!
+  rails-assets-components-font-awesome!
+  rails-assets-lf-ng-md-file-input!
   rails-assets-lodash!
   rails-assets-moment (= 2.15.0)!
   rails_apps_pages

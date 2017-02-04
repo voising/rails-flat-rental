@@ -1,18 +1,17 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.3.1'
+gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
 gem 'rails', '~> 5.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'jquery-rails'
 # gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
@@ -27,10 +26,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -75,24 +74,29 @@ group :production do
   gem 'unicorn'
 end
 
-
 # ASSETS
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-lodash'
+  gem 'rails-assets-components-font-awesome'
   gem 'rails-assets-angular'
   gem 'rails-assets-angular-animate'
+  gem 'rails-assets-angular-aria'
+  gem 'rails-assets-angular-cookies'
+  gem 'rails-assets-lodash'
+  gem 'rails-assets-lf-ng-md-file-input'
   gem 'rails-assets-moment', '2.15.0'
-
+  gem 'rails-assets-angular-dragdrop'
+  gem 'rails-assets-angular-fontawesome'
   gem 'rails-assets-angular-material'
   gem 'rails-assets-angular-route'
   gem 'rails-assets-angular-selectize2'
-  gem 'rails-assets-angular-dragdrop'
+  gem 'rails-assets-angular-resource'
 
   # https://angular-translate.github.io/docs/#/guide
   gem 'rails-assets-angular-translate'
-  gem 'rails-assets-angular-translate-loader-static-files'
 
   # https://angular-ui.github.io/angular-google-maps/#!/
   gem 'rails-assets-angular-google-maps'
+
+  gem 'rails-assets-angular-ui-notification'
 end

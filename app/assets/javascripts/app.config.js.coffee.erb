@@ -1,0 +1,47 @@
+
+@application.config(['$routeProvider', '$locationProvider', '$httpProvider',
+                     '$translateProvider', 'NotificationProvider', '$mdThemingProvider'
+    ($routeProvider, $locationProvider, $httpProvider,
+     $translateProvider, NotificationProvider, $mdThemingProvider) ->
+
+      # ROUTES
+
+      $routeProvider
+      .when '/flats/new',
+        templateUrl: 'flats/new'
+      .when '/flats/edit',
+        templateUrl: 'flats/edit'
+      .when '/flats/:id',
+        templateUrl: 'flats/show'
+      .otherwise
+        redirectTo: '/flats/new'
+
+      $locationProvider.html5Mode true
+
+      # USE RAILS CSRF TOKEN
+
+      $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+
+      # I18n
+
+      <% Dir.glob(File.join(Rails.root, %w{app assets javascripts i18n *})).each do |locale_file| %>
+      <% lg = locale_file[/locale-(\w\w)/, 1] %>
+      $translateProvider.translations('<%= lg %>', <%= YAML.load(File.read(locale_file)).to_json %>)
+      <% end %>
+
+      $translateProvider.preferredLanguage('en')
+
+      # Notifications
+
+      NotificationProvider.setOptions(
+        delay: 2000,
+        startTop: 20,
+        startRight: 10,
+        verticalSpacing: 20,
+        horizontalSpacing: 20,
+        positionX: 'right',
+        positionY: 'top'
+      )
+
+  ]
+)
