@@ -1,14 +1,14 @@
-app = angular.module 'flatService', ['ngResource']
+app = angular.module 'serviceService', ['ngResource']
 
-app.factory 'Flat', ['$resource',
+app.factory 'Service', ['$resource',
   ($resource) ->
-    Item = $resource '/flats/:id.json', {id: '@id'},
+    Item = $resource '/services/:id.json', {id: '@id'},
       all:
         isArray: true
       update:
         method: 'PUT'
         transformRequest: (object) -> # incapsulate the object inside the conversation param
-          angular.toJson flat: object
+          angular.toJson service: object
       updateAll:
         method: 'PUT'
         isArray: true
@@ -18,7 +18,7 @@ app.factory 'Flat', ['$resource',
       create:
         method: 'POST'
         transformRequest: (object) -> # incapsulate the object inside the conversation param
-          angular.toJson flat: object
+          angular.toJson service: object
 
     Item
 ]

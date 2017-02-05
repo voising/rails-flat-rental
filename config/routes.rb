@@ -12,4 +12,15 @@ Rails.application.routes.draw do
   end
 
   resources :flats
+  resources :places
+  resources :services
+
+  resources :flats_services
+  resources :flats_places
+
+  resources :pictures do
+    collection do
+      post 'uploads' => 'pictures/uploads#create'
+    end
+  end
 end

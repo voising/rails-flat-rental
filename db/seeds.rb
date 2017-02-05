@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+[
+  { name: 'Internet',   icon: 'fa-globe' },
+  { name: 'Wifi',       icon: 'fa-wifi' },
+  { name: 'Bathtub',    icon: 'fa-bath' },
+  { name: 'Shower',     icon: 'fa-shower' },
+  { name: 'Television', icon: 'fa-television' }
+].each do |service|
+  Service.create service
+end

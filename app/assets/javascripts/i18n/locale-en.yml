@@ -1,3 +1,13 @@
 flats:
+  section_header:
+    flat_infos: 'Flat'
+    map: 'Map'
+    places_nearby: 'Places nearby'
+    services: 'Services'
   labels:
     title: "Title"
+    description: "Description"
+    map_description: "Neighbourhood description"
+    address: 'Address'
+  buttons:
+    save: 'Save'

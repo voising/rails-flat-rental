@@ -16,6 +16,7 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
 
+
     if @flat.save
       render json: @flat, status: :created, location: @flat
     else
@@ -45,6 +46,6 @@ class FlatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def flat_params
-      params.fetch(:flat, {})
+      params.require(:flat).permit(:title, :description, :map_description, services: [], places: [], pictures: [])
     end
 end

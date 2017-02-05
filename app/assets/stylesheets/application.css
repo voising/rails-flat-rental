@@ -14,6 +14,8 @@
  *= require angular-material
  *= require components-font-awesome
  *= require lf-ng-md-file-input
+ *= require bootstrap-fileinput
+ *= require_tree ../javascripts/components
  *= require_tree .
  *= require_self
  */
@@ -21,4 +23,12 @@
 
 .h100 {
   height: 100%;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.mt30 {
+ margin-top: 30px;
 }

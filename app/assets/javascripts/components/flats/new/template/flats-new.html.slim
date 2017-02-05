@@ -1,0 +1,65 @@
+h1.md-display-3
+  | {{ 'flats.section_header.flat_infos' | translate }}
+hr
+
+/ TITLE
+md-input-container
+  label
+    | {{ 'flats.labels.title' | translate }}
+  input.t-center ng-model="$ctrl.flat.title"
+
+br
+/ DESCRIPTIONS
+md-input-container.input-desc
+  label
+    | {{ 'flats.labels.description' | translate }}
+  textarea ng-model="$ctrl.flat.description"
+
+/ PHOTOS
+input type="file" name="pictures[]" data-upload-url="/pictures/uploads" angular-bfi="$ctrl.fileInputConfig" multiple="true"
+
+h2.md-display-2
+  | {{ 'flats.section_header.map' | translate }}
+hr
+
+/ ADDRESS
+ng-map center="{{ $ctrl.map.center }}" zoom="{{ $ctrl.map.zoom }}"
+  marker icon="{{ $ctrl.map.marker.icon }}" position="[$ctrl.flat.latitude, $ctrl.flat.longitude]" ng-if="$ctrl.flat.latitude"
+
+md-input-container.input-desc
+  label
+    | {{ 'flats.labels.address' | translate }}
+  input ng-model="$ctrl.flat.address" ng-keyup="$ctrl.geocodeAfter500ms()"
+
+br
+
+/ MAP DESCRIPTION
+md-input-container.input-desc
+  label
+    | {{ 'flats.labels.map_description' | translate }}
+  textarea ng-model="$ctrl.flat.map_description"
+
+h3.md-display-1
+  | {{ 'flats.section_header.places_nearby' | translate }}
+hr
+.places
+
+  / PLACES NEARBY
+  places-list places="$ctrl.flat.places" flat="$ctrl.flat"
+  places-new
+
+
+md-input-container
+
+h2.md-display-2
+  | {{ 'flats.section_header.services' | translate }}
+hr
+.services
+
+  / SERVICES
+  services-list services="$ctrl.flat.services" flat="$ctrl.flat" layout="row" layout-align="center center" layout-wrap="wrap"
+  services-new services="$ctrl.flat.services"
+
+.footer layout="row" layout-align="end start"
+  md-button ng-click="$ctrl.flat.$save()"
+    | {{ 'flats.buttons.save' | translate }}

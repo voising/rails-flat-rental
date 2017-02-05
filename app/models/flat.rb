@@ -9,5 +9,7 @@ class Flat < ApplicationRecord
   has_many :flats_places
   has_many :places, through: :flats_places
 
+  has_many :pictures, as: :picturable, dependent: :destroy
+
   enum kind: %i(shared independent)
 end

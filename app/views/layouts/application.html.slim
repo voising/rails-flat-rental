@@ -8,8 +8,8 @@ html.h100 ng-app="bookingApp"
     link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"
     = stylesheet_link_tag 'application', media: 'all'
   body.h100
-    .app.h100 ng-view="true"
+    .app.h100 ng-view="true" layout="row" layout-align="space-between start"
     = yield
+    script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDsEddqfJOc4HYEtXjPO71e8yDyxqGQUqk"
+    /script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsEddqfJOc4HYEtXjPO71e8yDyxqGQUqk&callback=initMap" async="true" defer="true"
     = javascript_include_tag 'application'
-
-

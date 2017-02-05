@@ -1,0 +1,6 @@
+.services-list__service ng-repeat="service in $ctrl.services | unique:'name'"
+  md-tooltip md-direction="top"
+    | {{ service.name }}
+  fa name="{{ service.icon.replace('fa-', '') }}" size="1" ng-if="service.icon.indexOf('fa-') != -1"
+
+ng-transclude

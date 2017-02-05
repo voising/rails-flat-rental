@@ -1,3 +1,11 @@
 flats:
+  section_header:
+    flat_infos: 'Appartement'
+    map: 'Carte'
+    places_nearby: 'Commodités'
+    services: 'Services'
   labels:
     title: "Titre"
+    description: "Description"
+  buttons:
+    save: 'Sauvegarder'

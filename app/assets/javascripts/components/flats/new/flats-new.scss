@@ -1,3 +1,68 @@
 flats-new {
+  padding: 0 12px;
+  max-height: initial !important;
+  margin-bottom: 30px !important;
+
+  ng-map {
+    width: 60%;
+    margin: auto;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    width: 8%;
+    margin: 0 auto 12px;
+    border-color: #d9d9d9;
+  }
+
+  .input-desc {
+    width: 50%;
+  }
+
+  md-input-container label:not(.md-no-float):not(.md-container-ignore),
+  md-input-container .md-placeholder {
+    transform-origin: center;
+  }
+
+  // Pictures fileinput
+
+  #kvFileinputModal {
+    display: none;
+  }
+
+  .file-input {
+    width: 60%;
+    margin: auto;
+    border: 0 none;
+  }
+  .file-preview-frame {
+    float: none;
+  }
+  .file-live-thumbs {
+    display: flex;
+  }
+  .fileinput-remove {
+    float: right;
+  }
+  .btn-file {
+    display: none;
+  }
+  .file-footer-caption {
+    font-size: 0;
+  }
+  .input-group-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  // Map
+
+  .angular-google-map-container { height: 400px; }
+
 
 }

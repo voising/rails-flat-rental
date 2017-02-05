@@ -8,7 +8,7 @@ app.component('flatsShow', {
 #    attendees: '<'
 #    user: '<'
 
-  templateUrl: 'flats-show'
+  templateUrl: 'flats-show.html'
 
   controller: ['Flat', '$mdDialog',
     (Flat, $mdDialog) ->

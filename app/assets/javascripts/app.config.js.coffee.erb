@@ -1,26 +1,27 @@
 
 @application.config(['$routeProvider', '$locationProvider', '$httpProvider',
-                     '$translateProvider', 'NotificationProvider', '$mdThemingProvider'
+                     '$translateProvider', 'NotificationProvider',
+                     '$mdThemingProvider',
     ($routeProvider, $locationProvider, $httpProvider,
-     $translateProvider, NotificationProvider, $mdThemingProvider) ->
+     $translateProvider, NotificationProvider,
+     $mdThemingProvider) ->
 
       # ROUTES
 
       $routeProvider
       .when '/flats/new',
-        templateUrl: 'flats/new'
+        templateUrl: 'flats/new.html'
       .when '/flats/edit',
-        templateUrl: 'flats/edit'
+        templateUrl: 'flats/edit.html'
       .when '/flats/:id',
-        templateUrl: 'flats/show'
+        templateUrl: 'flats/show.html'
       .otherwise
         redirectTo: '/flats/new'
 
       $locationProvider.html5Mode true
 
-      # USE RAILS CSRF TOKEN
-
-      $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+      #
+      #
 
       # I18n
 
@@ -30,6 +31,10 @@
       <% end %>
 
       $translateProvider.preferredLanguage('en')
+
+
+      #
+      #
 
       # Notifications
 
@@ -42,6 +47,15 @@
         positionX: 'right',
         positionY: 'top'
       )
+
+      #
+      #
+
+      # Theme
+
+      $mdThemingProvider.theme('default')
+      .primaryPalette('red')
+      .accentPalette('blue')
 
   ]
 )

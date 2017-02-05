@@ -17,7 +17,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 
+# BOOKING
 gem 'acts_as_bookable'
+
+# PICTURES
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'mini_magick'
 
 # gem 'capistrano-rails', group: :development
 
@@ -43,12 +48,14 @@ gem 'simple_form'
 gem 'slim-rails'
 
 group :development do
+  gem 'awesome_print'
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano-rails-console'
-  gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'capistrano-sidekiq'
+  # gem 'capistrano-rbenv', '~> 2.0'
   gem 'foreman'
   gem 'haml2slim'
   gem 'html2haml'
@@ -76,9 +83,11 @@ end
 
 # ASSETS
 
+gem 'angular-rails-templates'
 source 'https://rails-assets.org' do
   gem 'rails-assets-components-font-awesome'
   gem 'rails-assets-angular'
+  gem 'rails-assets-angular-simple-logger'
   gem 'rails-assets-angular-animate'
   gem 'rails-assets-angular-aria'
   gem 'rails-assets-angular-cookies'
@@ -96,7 +105,14 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-translate'
 
   # https://angular-ui.github.io/angular-google-maps/#!/
-  gem 'rails-assets-angular-google-maps'
+  # gem 'rails-assets-angular-google-maps', '>= 2.3.2'
+
+  gem 'rails-assets-ngmap'
+
+  gem 'rails-assets-ng-rails-csrf'
 
   gem 'rails-assets-angular-ui-notification'
+
+  gem 'rails-assets-bootstrap-fileinput'
+  gem 'rails-assets-angular-bootstrap-fileinput'
 end

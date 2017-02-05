@@ -1,25 +1,37 @@
 
 #= require jquery
+#= require lodash
+#= require bootstrap-fileinput
 #= require angular
 #= require angular-route
 #= require angular-resource
+#= require angular-rails-templates
 #= require angular-messages
 #= require angular-animate
 #= require angular-aria
 #= require angular-cookies
-#= require angular-google-maps
+#= require angular-simple-logger
 #= require angular-material
 #= require angular-fontawesome
 #= require angular-selectize2
 #= require angular-dragdrop
 #= require angular-translate
 #= require angular-ui-notification
-#= require lf-ng-md-file-input
+#= require angular-bootstrap-fileinput
+#= require ng-rails-csrf
+#= require ngmap
+#= require_tree ./templates
 
-#= require app.templates
 #= require app.module
+#= require app.filter
 #= require app.config
 
 #= require_tree ./components
 #= require_tree ./services
 
+
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+  }
+});

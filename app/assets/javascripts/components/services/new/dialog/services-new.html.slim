@@ -1,0 +1,24 @@
+/ DIALOG
+#services_new_dialog.md-dialog-container
+  md-dialog layout-padding="true"
+    md-dialog-content
+
+      / SERVICES
+      .services-to-add layout="row" layout-align="space-around start" layout-wrap="wrap"
+
+        / SERVICE
+        md-checkbox.t-center {
+          ng-repeat="service in $ctrl.availableServices"
+          ng-click="$ctrl.toggle(service, $ctrl.servicesSelected)"
+          ng-checked="$ctrl.exists(service, $ctrl.servicesSelected)"
+          aria-label="Service: {{ service.name }}"
+          flex="20"}
+
+
+          fa name="{{ service.icon.replace('fa-', '') }}" size="2" ng-if="service.icon.indexOf('fa-') != -1"
+          br
+          | {{ service.name }}
+
+    md-dialog-actions layout="row"
+      md-button ng-click="$ctrl.closeDialog()"
+        | OK

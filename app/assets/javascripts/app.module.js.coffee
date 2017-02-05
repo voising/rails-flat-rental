@@ -5,11 +5,12 @@
   'ngDragDrop',
   'ngMaterial',
   'ngCookies',
+  'ngMap',
   'selectize',
-  'uiGmapgoogle-maps',
   'pascalprecht.translate',
   'ui-notification',
   'picardy.fontawesome',
-  'lfNgMdFileInput',
-  'templates'
+  'templates',
+  'angularBootstrapFileinput',
+  'ng-rails-csrf'
 ])
