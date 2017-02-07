@@ -1,6 +1,7 @@
-# Weekly room booking system
+# Rails flat rental
 
 Built with Ruby on Rails 5 & Angular 1.6
+Rent a flat on a weekly basis
 
 Installation
 ------------
