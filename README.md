@@ -20,7 +20,7 @@ Todo
 ----
 
 ### Setup
-[✓] Necessary Gems
+[✓] Necessary Gems  
 [✓] Necessary Angular Plugins
 
 ### Auth
