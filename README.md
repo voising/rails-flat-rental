@@ -27,15 +27,15 @@ Todo
 [✓] Add devise
 
 ### Flats#new
-[✓] Add pictures - Drag & Drop
-[✓] Add Services
-[✓] Add geolocated address
-[✓] Add places nearby
-[---] Configure booking availabilities 
+[✓] Add pictures - Drag & Drop  
+[✓] Add Services  
+[✓] Add geolocated address  
+[✓] Add places nearby  
+[---] Configure booking availabilities  
 
 ### Flats#show
-[✓] Show pictures
-[✓] Show Services
-[✓] Show geolocated address
-[✓] Show places nearby
-[---] Show Booking module 
+[✓] Show pictures  
+[✓] Show Services  
+[✓] Show geolocated address  
+[✓] Show places nearby  
+[---] Show Booking module  
