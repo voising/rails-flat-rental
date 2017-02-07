@@ -1,12 +1,10 @@
 class Pictures::UploadsController < ApplicationController
-
   def create
-    picture_ids = params[:pictures].reduce([]) do |ids, file|
-      ids << Picture.create(file: file).id
+    pictures = params[:pictures].reduce([]) do |arr, file|
+      arr << Picture.create(file: file)
     end
-
     render json: {
-      picture_ids: picture_ids
+      pictures: pictures
     }
   end
 end

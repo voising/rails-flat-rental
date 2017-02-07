@@ -1,0 +1,15 @@
+
+/ PLACE AUTOCOMPELETE
+md-input-container md-no-float="true" class="md-block"
+  input {
+        places-auto-complete="true"
+        size="40"
+        ng-model="$ctrl.place.address"
+        ng-keyup="$ctrl.addPlaceOnEnter($event)"
+        placeholder="Place name"
+        types="['establishment']"
+        on-place-changed="$ctrl.placeChanged()"}
+
+/ BUTTON
+md-button ng-click="$ctrl.addPlace()"
+  fa name="plus" size="1"

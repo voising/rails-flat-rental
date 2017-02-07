@@ -35,13 +35,14 @@ class FlatsPlacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_flats_place
-      @flats_place = FlatsPlace.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def flats_place_params
-      params.fetch(:flats_place, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_flats_place
+    @flats_place = FlatsPlace.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def flats_place_params
+    params.fetch(:flats_place, {})
+  end
 end

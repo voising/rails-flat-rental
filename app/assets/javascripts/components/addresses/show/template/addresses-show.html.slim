@@ -1,0 +1,11 @@
+ng-map center="{{ $ctrl.config.center }}" zoom="{{ $ctrl.config.zoom }}"
+  marker icon="{{ $ctrl.markerIcon }}" position="{{ $ctrl.addressable.latitude }}, {{ $ctrl.addressable.longitude }}" ng-if="$ctrl.addressable.latitude"
+  marker id="marker_{{ marker.id }}" ng-repeat="marker in $ctrl.secondaryMarkers" icon="{{ $ctrl.secondaryMarkerIcon }}" position="{{ marker.latitude }}, {{ marker.longitude }}" on-click="$ctrl.showInfo(marker)"
+  info-window#marker_comment
+    div.marker-info ng-non-bindable=""
+      div.close ng-click="$ctrl.hideInfo()"
+        | x
+      b
+        | {{ $ctrl.marker.name }}
+      br
+      | {{ $ctrl.marker.description }}

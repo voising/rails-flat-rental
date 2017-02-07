@@ -1,0 +1,49 @@
+addresses-show {
+  ng-map {
+    width: 60%;
+    height: 400px;
+    margin: auto;
+  }
+  .ng-map-info-window {
+    max-width: 240px;
+    .close {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      position: absolute;
+      right: -4px;
+      top: -13px;
+      padding: 10px;
+    }
+    .marker-info {
+      padding: 10px 0;
+    }
+    .gm-style-iw {
+      cursor: pointer;
+      font-weight: 400;
+      max-width: 240px;
+    }
+    img {
+      display: none;
+    }
+    div {
+      box-shadow: initial !important;
+    }
+    & > div {
+      color: #FFF;
+      background-color: #00C1FF;
+      opacity: 1 !important;
+      div+div {
+        background-color: #00C1FF !important;
+        border-radius: 10px !important;
+      }
+      div:nth-child(2) {
+        background-color: transparent !important;
+      }
+      div+div+div {
+        div div {
+          background-color: #00C1FF !important;
+        }
+      }
+    }
+  }
+}

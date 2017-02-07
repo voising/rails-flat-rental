@@ -1,3 +1,26 @@
 flats-show {
+  padding: 0 12px 40px;
+  max-height: initial !important;
+  margin-bottom: 30px !important;
+
+  h1, h2, h3 {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    width: 8%;
+    margin: 0 auto 12px;
+    border-color: #d9d9d9;
+  }
+
+  md-content {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+  }
+
+  // Map
+
+  .angular-google-map-container { height: 400px; }
 
 }

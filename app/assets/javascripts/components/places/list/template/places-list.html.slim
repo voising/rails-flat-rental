@@ -1,0 +1,7 @@
+ul
+  li ng-repeat="place in $ctrl.places"
+    | <b>{{ place.name }}</b>, {{ place.address }}
+    br
+    md-input-container md-no-float="true" ng-if="$ctrl.flat.isEditable"
+      input placeholder="Comment" ng-model="place.description" ng-change="place.$update()"
+

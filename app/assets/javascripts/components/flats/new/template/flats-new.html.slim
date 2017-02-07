@@ -16,20 +16,25 @@ md-input-container.input-desc
   textarea ng-model="$ctrl.flat.description"
 
 / PHOTOS
-input type="file" name="pictures[]" data-upload-url="/pictures/uploads" angular-bfi="$ctrl.fileInputConfig" multiple="true"
+pictures-new picturable="$ctrl.flat"
+
 
 h2.md-display-2
-  | {{ 'flats.section_header.map' | translate }}
+  | {{ 'flats.section_header.services' | translate }}
+hr
+.services
+
+  / SERVICES
+  services-list services="$ctrl.flat.services" flat="$ctrl.flat" layout="row" layout-align="center center" layout-wrap="wrap"
+  services-new services="$ctrl.flat.services"
+
+h2.md-display-2
+  | {{ 'flats.section_header.location' | translate }}
 hr
 
 / ADDRESS
-ng-map center="{{ $ctrl.map.center }}" zoom="{{ $ctrl.map.zoom }}"
-  marker icon="{{ $ctrl.map.marker.icon }}" position="[$ctrl.flat.latitude, $ctrl.flat.longitude]" ng-if="$ctrl.flat.latitude"
+addresses-new addressable="$ctrl.flat" secondary-markers="$ctrl.flat.places"
 
-md-input-container.input-desc
-  label
-    | {{ 'flats.labels.address' | translate }}
-  input ng-model="$ctrl.flat.address" ng-keyup="$ctrl.geocodeAfter500ms()"
 
 br
 
@@ -45,21 +50,16 @@ hr
 .places
 
   / PLACES NEARBY
+  places-new places="$ctrl.flat.places" layout="row" layout-align="center start"
   places-list places="$ctrl.flat.places" flat="$ctrl.flat"
-  places-new
 
 
 md-input-container
 
-h2.md-display-2
-  | {{ 'flats.section_header.services' | translate }}
-hr
-.services
 
-  / SERVICES
-  services-list services="$ctrl.flat.services" flat="$ctrl.flat" layout="row" layout-align="center center" layout-wrap="wrap"
-  services-new services="$ctrl.flat.services"
 
 .footer layout="row" layout-align="end start"
+  md-button ng-href="/flats/{{ $ctrl.flat.id }}" target="_blank" ng-show="$ctrl.flat.id"
+    | {{ 'flats.buttons.show' | translate }}
   md-button ng-click="$ctrl.flat.$save()"
     | {{ 'flats.buttons.save' | translate }}

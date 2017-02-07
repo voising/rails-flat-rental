@@ -12,13 +12,19 @@ class FlatsController < ApplicationController
 
   def new; end
 
+  def edit; end
+
   # POST /flats
   def create
     @flat = Flat.new(flat_params)
-
+    @flat.user = current_user
 
     if @flat.save
-      render json: @flat, status: :created, location: @flat
+      %i(places services pictures).each do |relations|
+        @flat.add_relation named: relations, with: params[relations]
+      end
+
+      render :show
     else
       render json: @flat.errors, status: :unprocessable_entity
     end
@@ -27,7 +33,7 @@ class FlatsController < ApplicationController
   # PATCH/PUT /flats/1
   def update
     if @flat.update(flat_params)
-      render json: @flat
+      render :show
     else
       render json: @flat.errors, status: :unprocessable_entity
     end
@@ -39,13 +45,24 @@ class FlatsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_flat
-      @flat = Flat.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def flat_params
-      params.require(:flat).permit(:title, :description, :map_description, services: [], places: [], pictures: [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_flat
+    @flat = Flat.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def flat_params
+    params.require(:flat).permit(
+      :title,
+      :description,
+      :map_description,
+      :address,
+      :latitude,
+      :longitude,
+      services: [],
+      places: [],
+      pictures: []
+    )
+  end
 end

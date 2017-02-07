@@ -1,0 +1,6 @@
+addresses-show addressable="$ctrl.addressable" secondary-markers="$ctrl.secondaryMarkers"
+
+md-input-container.input-desc
+  label
+    | {{ 'flats.labels.address' | translate }}
+  input ng-model="$ctrl.addressable.address" ng-blur="$ctrl.geocode($ctrl.addressable.address)"

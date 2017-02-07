@@ -1,0 +1,1 @@
+json.array! @flats_places, partial: 'flats_places/flats_place', as: :flats_place

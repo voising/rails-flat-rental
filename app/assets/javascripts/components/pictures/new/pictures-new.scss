@@ -1,0 +1,43 @@
+pictures-new {
+  #kvFileinputModal {
+    display: none;
+  }
+
+  .file-input {
+    width: 60%;
+    margin: auto;
+    border: 0 none;
+    .md-button {
+      min-width: 58px;
+    }
+  }
+  .file-preview-frame {
+    float: none;
+    box-shadow: initial;
+    &:hover {
+      box-shadow: initial;
+    }
+  }
+  .file-live-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .file-preview {
+    border: 0 none;
+  }
+  .file-caption-name {
+    display: none;
+  }
+  .fileinput-remove {
+    float: right;
+  }
+  .file-footer-caption {
+    font-size: 0;
+  }
+  .input-group-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}

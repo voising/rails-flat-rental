@@ -1,0 +1,22 @@
+pictures-show {
+  .ng-image-gallery {
+    outline: none;
+    width: 60%;
+    margin: 40px auto 7px auto;
+  }
+
+  .ng-image-gallery .ng-image-gallery-thumbnails {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .thumb {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span.img-bubble {
+    width: 52px;
+    height: 52px;
+  }
+}

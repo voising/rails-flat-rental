@@ -48,6 +48,7 @@ gem 'simple_form'
 gem 'slim-rails'
 
 group :development do
+  gem 'meta_request'
   gem 'awesome_print'
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
@@ -85,21 +86,22 @@ end
 
 gem 'angular-rails-templates'
 source 'https://rails-assets.org' do
-  gem 'rails-assets-components-font-awesome'
   gem 'rails-assets-angular'
-  gem 'rails-assets-angular-simple-logger'
   gem 'rails-assets-angular-animate'
   gem 'rails-assets-angular-aria'
   gem 'rails-assets-angular-cookies'
-  gem 'rails-assets-lodash'
-  gem 'rails-assets-lf-ng-md-file-input'
-  gem 'rails-assets-moment', '2.15.0'
+  gem 'rails-assets-angular-devise'
   gem 'rails-assets-angular-dragdrop'
   gem 'rails-assets-angular-fontawesome'
   gem 'rails-assets-angular-material'
+  gem 'rails-assets-angular-resource'
   gem 'rails-assets-angular-route'
   gem 'rails-assets-angular-selectize2'
-  gem 'rails-assets-angular-resource'
+  gem 'rails-assets-angular-simple-logger'
+  gem 'rails-assets-components-font-awesome'
+  gem 'rails-assets-lf-ng-md-file-input'
+  gem 'rails-assets-lodash'
+  gem 'rails-assets-moment', '2.15.0'
 
   # https://angular-translate.github.io/docs/#/guide
   gem 'rails-assets-angular-translate'
@@ -108,11 +110,13 @@ source 'https://rails-assets.org' do
   # gem 'rails-assets-angular-google-maps', '>= 2.3.2'
 
   gem 'rails-assets-ngmap'
+  gem 'rails-assets-ng-image-gallery'
+
 
   gem 'rails-assets-ng-rails-csrf'
 
   gem 'rails-assets-angular-ui-notification'
 
-  gem 'rails-assets-bootstrap-fileinput'
   gem 'rails-assets-angular-bootstrap-fileinput'
+  gem 'rails-assets-bootstrap-fileinput'
 end

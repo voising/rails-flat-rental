@@ -1,0 +1,40 @@
+h1.md-display-3
+  | {{ $ctrl.flat.title }}
+
+/ PHOTOS
+pictures-show pictures="$ctrl.flat.pictures"
+
+br
+/ DESCRIPTIONS
+md-content
+  | {{ $ctrl.flat.description }}
+
+
+
+h3.md-display-2
+  | {{ 'flats.section_header.services' | translate }}
+hr
+
+.services
+  / SERVICES
+  services-list services="$ctrl.flat.services" flat="$ctrl.flat" layout="row" layout-align="center center" layout-wrap="wrap"
+
+h2.md-display-2
+  | {{ 'flats.section_header.location' | translate }}
+hr
+
+/ ADDRESS
+addresses-show addressable="$ctrl.flat" secondary-markers="$ctrl.flat.places" ng-if="$ctrl.flat.$resolved"
+
+/ MAP DESCRIPTION
+md-content
+  | {{ $ctrl.flat.map_description }}
+
+h3.md-display-1
+  | {{ 'flats.section_header.places_nearby' | translate }}
+hr
+.places
+
+  / PLACES NEARBY
+  places-list places="$ctrl.flat.places" flat="$ctrl.flat"
+

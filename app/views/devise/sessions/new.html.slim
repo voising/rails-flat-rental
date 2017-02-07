@@ -2,11 +2,11 @@
   md-content ng-cloak="true" layout-gt-sm="column" layout-padding="true"
     h2.md-display-1
       | Log in
-    = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {layout:'column', 'layout-align' =>'start start'}) do |f|
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {layout:'column', 'layout-align' =>'start start', 'ng-submit' => 'login()'}) do |f|
       md-input-container
-        = f.input :email, required: false, autofocus: true, wrapper: false
+        = f.input :email, required: false, autofocus: true, wrapper: false, input_html: {'ng-model' => 'credentials.email'}
       md-input-container
-        = f.input :password, required: false, wrapper: false
+        = f.input :password, required: false, wrapper: false, input_html: {'ng-model' => 'credentials.password'}
       md-input-container
         = f.input :remember_me, as: :boolean, wrapper: false if devise_mapping.rememberable?
       = f.button :submit, 'Log in', class: 'md-button md-primary'

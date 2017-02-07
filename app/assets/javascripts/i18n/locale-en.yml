@@ -4,6 +4,7 @@ flats:
     map: 'Map'
     places_nearby: 'Places nearby'
     services: 'Services'
+    location: 'Location'
   labels:
     title: "Title"
     description: "Description"
@@ -11,3 +12,4 @@ flats:
     address: 'Address'
   buttons:
     save: 'Save'
+    show: 'Show'

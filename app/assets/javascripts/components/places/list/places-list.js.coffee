@@ -1,21 +1,21 @@
-#= require services/service
+#= require services/place
 
-app = angular.module 'servicesListComponent', ['serviceService']
+app = angular.module 'placesListComponent', ['placeService']
 
-app.component('servicesList', {
+app.component('placesList', {
+
+  bindings:
+    places: '<'
+    flat: '<'
 
   templateUrl: 'places-list.html'
 
-  controller: ['Service', '$mdDialog',
-    (Service, $mdDialog) ->
+  controller: ['Place', (Place) ->
 
-      @service = new Service
+    @place = new Place
 
-
-
-
-      @
+    @
   ]
 })
 
-@application.requires.push('servicesListComponent')
+@application.requires.push('placesListComponent')

@@ -9,7 +9,6 @@ class PlacesController < ApplicationController
   # GET /places/1
   def show; end
 
-  # POST /places
   def create
     @place = Place.new(place_params)
 
@@ -35,13 +34,14 @@ class PlacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_place
-      @place = Place.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def place_params
-      params.fetch(:place, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_place
+    @place = Place.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def place_params
+    params.require(:place).permit(:name, :address, :latitude, :longitude)
+  end
 end

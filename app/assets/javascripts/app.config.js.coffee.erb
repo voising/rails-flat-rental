@@ -1,10 +1,10 @@
 
 @application.config(['$routeProvider', '$locationProvider', '$httpProvider',
                      '$translateProvider', 'NotificationProvider',
-                     '$mdThemingProvider',
+                     '$mdThemingProvider', 'ngImageGalleryOptsProvider',
     ($routeProvider, $locationProvider, $httpProvider,
      $translateProvider, NotificationProvider,
-     $mdThemingProvider) ->
+     $mdThemingProvider, ngImageGalleryOptsProvider) ->
 
       # ROUTES
 
@@ -15,8 +15,12 @@
         templateUrl: 'flats/edit.html'
       .when '/flats/:id',
         templateUrl: 'flats/show.html'
+      .when '/users/sign_in',
+        controller: 'UsersSignInCtrl'
+      .when '/users/sign_up',
+        controller: 'UsersSignUpCtrl'
       .otherwise
-        redirectTo: '/flats/new'
+        redirectTo: '/users/sign_in'
 
       $locationProvider.html5Mode true
 
@@ -57,5 +61,7 @@
       .primaryPalette('red')
       .accentPalette('blue')
 
+      return
+
   ]
-)
+).constant('_', window._)

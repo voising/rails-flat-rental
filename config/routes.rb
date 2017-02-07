@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated do
-      root to: 'flats#new'
+      root to: '/flats/new', controller: :flats, action: :new
     end
 
     unauthenticated do

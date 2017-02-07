@@ -14,6 +14,9 @@ class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>/1
   def show; end
 
+  # GET <%= route_url %>/1/edit
+  def edit; end
+
   # POST <%= route_url %>
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>

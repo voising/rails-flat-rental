@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205092954) do
+ActiveRecord::Schema.define(version: 20170207093014) do
 
   create_table "beds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "size"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170205092954) do
     t.float    "longitude",       limit: 24
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "title"
     t.index ["user_id"], name: "index_flats_on_user_id", using: :btree
   end
 

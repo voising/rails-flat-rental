@@ -74,6 +74,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.3)
     byebug (9.0.6)
+    callsite (0.0.11)
     capistrano (3.0.1)
       i18n
       rake (>= 10.0.0)
@@ -156,6 +157,10 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    meta_request (0.4.0)
+      callsite (~> 0.0, >= 0.0.11)
+      rack-contrib (~> 1.1)
+      railties (>= 3.0.0, < 5.1.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -199,6 +204,8 @@ GEM
       interception (>= 0.5)
       pry
     rack (2.0.1)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -215,15 +222,17 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.1)
       sprockets-rails (>= 2.0.0)
-    rails-assets-angular (1.5.11)
-    rails-assets-angular-animate (1.5.11)
-      rails-assets-angular (= 1.5.11)
-    rails-assets-angular-aria (1.5.11)
-      rails-assets-angular (= 1.5.11)
+    rails-assets-angular (1.6.1)
+    rails-assets-angular-animate (1.6.1)
+      rails-assets-angular (= 1.6.1)
+    rails-assets-angular-aria (1.6.1)
+      rails-assets-angular (= 1.6.1)
     rails-assets-angular-bootstrap-fileinput (0.1.0)
       rails-assets-bootstrap-fileinput (>= 4.0.0, < 5)
-    rails-assets-angular-cookies (1.5.11)
-      rails-assets-angular (= 1.5.11)
+    rails-assets-angular-cookies (1.6.1)
+      rails-assets-angular (= 1.6.1)
+    rails-assets-angular-devise (1.3.0)
+      rails-assets-angular (>= 1.2.0, < 2)
     rails-assets-angular-dragdrop (1.0.13)
       rails-assets-angular
       rails-assets-jquery-ui
@@ -235,18 +244,17 @@ GEM
       rails-assets-angular-animate (>= 1.4.8, < 2)
       rails-assets-angular-aria (>= 1.4.8, < 2)
       rails-assets-angular-messages (>= 1.4.8, < 2)
-    rails-assets-angular-messages (1.5.11)
-      rails-assets-angular (= 1.5.11)
-    rails-assets-angular-resource (1.5.11)
-      rails-assets-angular (= 1.5.11)
-    rails-assets-angular-route (1.5.11)
-      rails-assets-angular (= 1.5.11)
+    rails-assets-angular-messages (1.6.1)
+      rails-assets-angular (= 1.6.1)
+    rails-assets-angular-resource (1.6.1)
+      rails-assets-angular (= 1.6.1)
+    rails-assets-angular-route (1.6.1)
+      rails-assets-angular (= 1.6.1)
     rails-assets-angular-selectize2 (3.0.1)
       rails-assets-selectize (>= 0.12.1)
     rails-assets-angular-simple-logger (0.1.7)
       rails-assets-angular (>= 1.2, < 2)
-    rails-assets-angular-translate (2.13.1)
-      rails-assets-angular (>= 1.2.26, < 1.6)
+    rails-assets-angular-translate (2.5.2)
     rails-assets-angular-ui-notification (0.3.5)
       rails-assets-angular (>= 1.5.0, < 2)
     rails-assets-bootstrap (3.3.7)
@@ -256,6 +264,7 @@ GEM
       rails-assets-jquery (>= 1.9.0)
     rails-assets-components-font-awesome (4.7.0)
     rails-assets-font-awesome (4.7.0)
+    rails-assets-hammerjs (2.0.8)
     rails-assets-jquery (3.1.1)
     rails-assets-jquery-ui (1.12.1)
       rails-assets-jquery (>= 1.6)
@@ -264,6 +273,10 @@ GEM
     rails-assets-lodash (4.17.4)
     rails-assets-microplugin (0.0.3)
     rails-assets-moment (2.15.0)
+    rails-assets-ng-image-gallery (2.0.8)
+      rails-assets-angular (>= 1.5.7, < 2)
+      rails-assets-angular-animate (>= 1.5.7, < 2)
+      rails-assets-hammerjs (>= 2.0.8, < 3)
     rails-assets-ng-rails-csrf (0.1.0)
     rails-assets-ngmap (1.17.8)
     rails-assets-selectize (0.12.4)
@@ -396,6 +409,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  meta_request
   mini_magick
   minitest-rails
   minitest-reporters
@@ -408,6 +422,7 @@ DEPENDENCIES
   rails-assets-angular-aria!
   rails-assets-angular-bootstrap-fileinput!
   rails-assets-angular-cookies!
+  rails-assets-angular-devise!
   rails-assets-angular-dragdrop!
   rails-assets-angular-fontawesome!
   rails-assets-angular-material!
@@ -422,6 +437,7 @@ DEPENDENCIES
   rails-assets-lf-ng-md-file-input!
   rails-assets-lodash!
   rails-assets-moment (= 2.15.0)!
+  rails-assets-ng-image-gallery!
   rails-assets-ng-rails-csrf!
   rails-assets-ngmap!
   rails_apps_pages

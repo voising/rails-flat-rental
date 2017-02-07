@@ -4,6 +4,7 @@
 #= require bootstrap-fileinput
 #= require angular
 #= require angular-route
+#= require angular-devise
 #= require angular-resource
 #= require angular-rails-templates
 #= require angular-messages
@@ -20,15 +21,16 @@
 #= require angular-bootstrap-fileinput
 #= require ng-rails-csrf
 #= require ngmap
+#= require ng-image-gallery
 #= require_tree ./templates
 
 #= require app.module
-#= require app.filter
-#= require app.config
 
+#= require_tree ./controllers
 #= require_tree ./components
-#= require_tree ./services
 
+#= require app.config
+#= require app.filter
 
 $.ajaxSetup({
   headers: {

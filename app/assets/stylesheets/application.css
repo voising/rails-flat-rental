@@ -15,6 +15,7 @@
  *= require components-font-awesome
  *= require lf-ng-md-file-input
  *= require bootstrap-fileinput
+ *= require ng-image-gallery
  *= require_tree ../javascripts/components
  *= require_tree .
  *= require_self

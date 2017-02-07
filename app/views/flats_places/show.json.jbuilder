@@ -1,0 +1,1 @@
+json.partial! "flats_places/flats_place", flats_place: @flats_place
