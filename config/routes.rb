@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+  root 'application#index'
 
   devise_scope :user do
     authenticated do
       root to: '/flats/new', controller: :flats, action: :new
-    end
-
-    unauthenticated do
-      root to: 'devise/sessions#new', as: 'unauthenticated_root'
     end
   end
 

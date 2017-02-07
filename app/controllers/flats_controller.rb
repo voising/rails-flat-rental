@@ -1,6 +1,5 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :update, :destroy]
-  before_action :empty_html_ifn_json
 
   # GET /flats
   def index

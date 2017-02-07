@@ -1,0 +1,13 @@
+.sessions-new.h100 layout="colum" layout-align="center center"
+  md-content ng-cloak="true" layout-gt-sm="column" layout-padding="true"
+    h2.md-display-1
+      | Log in
+    form ng-submit="login()"
+      md-input-container
+        input.form-control autofocus="" ng-model="user.email" placeholder="Email" type="email"
+      md-input-container
+        input.form-control ng-model="user.password" placeholder="Password" type="password"
+      md-button ng-href="/users/sign_up" Create account
+      input.md-button.md-primary type="submit" value="Log In"
+
+

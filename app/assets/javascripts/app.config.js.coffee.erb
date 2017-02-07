@@ -1,10 +1,10 @@
 
 @application.config(['$routeProvider', '$locationProvider', '$httpProvider',
                      '$translateProvider', 'NotificationProvider',
-                     '$mdThemingProvider', 'ngImageGalleryOptsProvider',
+                     '$mdThemingProvider',
     ($routeProvider, $locationProvider, $httpProvider,
      $translateProvider, NotificationProvider,
-     $mdThemingProvider, ngImageGalleryOptsProvider) ->
+     $mdThemingProvider) ->
 
       # ROUTES
 
@@ -16,9 +16,11 @@
       .when '/flats/:id',
         templateUrl: 'flats/show.html'
       .when '/users/sign_in',
-        controller: 'UsersSignInCtrl'
+        templateUrl: 'users/sign-in.html'
+        controller: 'AuthCtrl'
       .when '/users/sign_up',
-        controller: 'UsersSignUpCtrl'
+        templateUrl: 'users/sign-up.html'
+        controller: 'AuthCtrl'
       .otherwise
         redirectTo: '/users/sign_in'
 

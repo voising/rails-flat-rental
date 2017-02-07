@@ -1,0 +1,11 @@
+.registrations-new.h100 layout="colum" layout-align="center center"
+  md-content ng-cloak="true" layout-gt-sm="column" layout-padding="true"
+    h2.md-display-1
+      | Sign up
+    form ng-submit="register()"
+      md-input-container
+        input.form-control autofocus="" ng-model="user.email" placeholder="Email" type="email"
+      md-input-container
+        input.form-control ng-model="user.password" placeholder="Password" type="password"
+      input.md-button.md-primary type="submit" value="Sign up"
+
