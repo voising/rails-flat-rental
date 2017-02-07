@@ -1,24 +1,41 @@
-# README
+# Weekly room booking system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built with Ruby on Rails 5 & Angular 1.6
 
-Things you may want to cover:
+Installation
+------------
 
-* Ruby version
+```sh
+# Edit config/database.yml
+# Launch mysql
+bundle
+rake db:setup
+rake db:seed
+rails s
 
-* System dependencies
+```
 
-* Configuration
 
-* Database creation
+Todo
+----
 
-* Database initialization
+### Setup
+[✓] Necessary Gems
+[✓] Necessary Angular Plugins
 
-* How to run the test suite
+### Auth
+[✓] Add devise
 
-* Services (job queues, cache servers, search engines, etc.)
+### Flats#new
+[✓] Add pictures - Drag & Drop
+[✓] Add Services
+[✓] Add geolocated address
+[✓] Add places nearby
+[---] Configure booking availabilities 
 
-* Deployment instructions
-
-* ...
+### Flats#show
+[✓] Show pictures
+[✓] Show Services
+[✓] Show geolocated address
+[✓] Show places nearby
+[---] Show Booking module 
