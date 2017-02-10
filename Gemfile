@@ -85,6 +85,7 @@ end
 # ASSETS
 
 gem 'angular-rails-templates'
+gem 'angular_rails_csrf'
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
   gem 'rails-assets-angular-animate'
@@ -111,9 +112,6 @@ source 'https://rails-assets.org' do
 
   gem 'rails-assets-ngmap'
   gem 'rails-assets-ng-image-gallery'
-
-
-  gem 'rails-assets-ng-rails-csrf'
 
   gem 'rails-assets-angular-ui-notification'
 

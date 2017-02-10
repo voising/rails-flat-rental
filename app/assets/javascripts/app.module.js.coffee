@@ -12,7 +12,6 @@
   'picardy.fontawesome',
   'templates',
   'angularBootstrapFileinput',
-  'ng-rails-csrf',
   'thatisuday.ng-image-gallery',
   'Devise'
 ])

@@ -19,7 +19,6 @@
 #= require angular-translate
 #= require angular-ui-notification
 #= require angular-bootstrap-fileinput
-#= require ng-rails-csrf
 #= require ngmap
 #= require ng-image-gallery
 #= require_tree ./templates
@@ -32,8 +31,3 @@
 #= require app.config
 #= require app.filter
 
-$.ajaxSetup({
-  headers: {
-    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-  }
-});

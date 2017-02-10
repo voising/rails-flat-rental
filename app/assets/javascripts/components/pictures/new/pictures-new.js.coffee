@@ -7,7 +7,7 @@ app.component('picturesNew', {
 
   templateUrl: 'pictures-new.html'
 
-  controller: ->
+  controller: ['$cookies', ($cookies) ->
 
     ctrl = @
 
@@ -38,7 +38,12 @@ app.component('picturesNew', {
     @onDestroy = ->
       $('.js-angular-fileinput').off 'fileuploaded'
 
+    $.ajaxSetup
+      headers:
+        'X-XSRF-TOKEN': $cookies.get('XSRF-TOKEN')
+
     @
+  ]
 })
 
 @application.requires.push('picturesNewComponent')
